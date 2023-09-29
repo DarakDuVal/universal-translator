@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "universal-translator"
+version = "0.1.0"
+description = "Provide the ultimate Star Trek feel with an AI-powered simultaneous translator, which takes your voice and provides the translated audio stream in target language."
+authors = ["DarakDuVal <oliver@irudolph.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+SpeechRecognition = "^3.10.0"
+PyAudio = "^0.2.13"
+pyttsx4 = "^3.0.15"
+deep-translator = "^1.11.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
