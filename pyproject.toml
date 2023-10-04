@@ -7,11 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-SpeechRecognition = "^3.10.0"
-PyAudio = "^0.2.13"
-pyttsx4 = "^3.0.15"
-deep-translator = "^1.11.4"
-
+ibm-watson = ">=7.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.2"

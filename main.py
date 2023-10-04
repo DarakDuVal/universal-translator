@@ -1,16 +1,26 @@
-# This is a sample Python script.
+from os.path import join, dirname
+import json
+from pathlib import Path
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from ibm_watson import SpeechToTextV1
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
+_APIKEY = 'uF9F4RtONm6mTUuAfgsFXRknOW1ARkR-ow1fNoInDG15'
+_S2T_SERVICE_URL = 'https://api.eu-de.speech-to-text.watson.cloud.ibm.com/instances/cad9fc09-4d2d-49c1-ae63-cdd85c2fa4f0'
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+_AUDIO_FILE = Path('./examples/audio-file2.flac')
 
+authenticator = IAMAuthenticator(_APIKEY)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+speech_to_text = SpeechToTextV1(
+    authenticator=authenticator
+)
+speech_to_text.set_service_url(_S2T_SERVICE_URL)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(_AUDIO_FILE.resolve())
+with open(_AUDIO_FILE.resolve(), 'rb') as audio_file:
+    results = speech_to_text.recognize(
+        audio=audio_file,
+        content_type='audio/flac'
+    ).get_result()
+print(json.dumps(results, indent=2))
