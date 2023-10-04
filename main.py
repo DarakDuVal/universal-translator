@@ -1,4 +1,3 @@
-import os
 import json
 from pathlib import Path
 
@@ -12,7 +11,7 @@ def get_env(filename) -> dict:
 
 
 secrets = get_env(Path('./secrets.json'))
-settings = get_env(Path('./settings.json'))
+env = get_env(Path('./env.json'))
 
 _AUDIO_FILE = Path('./examples/audio-file2.flac')
 
@@ -20,7 +19,7 @@ _AUDIO_FILE = Path('./examples/audio-file2.flac')
 speech_to_text = SpeechToTextV1(
     authenticator=IAMAuthenticator(secrets['API_KEYS']['SPEECH_TO_TEXT']),
 )
-speech_to_text.set_service_url(settings['SERVICE_URLS']['SPEECH_TO_TEXT'])
+speech_to_text.set_service_url(env['SERVICE_URLS']['SPEECH_TO_TEXT'])
 
 #print(_AUDIO_FILE.resolve())
 with open(_AUDIO_FILE.resolve(), 'rb') as audio_file:
@@ -36,7 +35,7 @@ language_translator = LanguageTranslatorV3(
     authenticator=IAMAuthenticator(secrets['API_KEYS']['LANGUAGE_TRANSLATOR']),
     version='2018-05-01'
 )
-language_translator.set_service_url(settings['SERVICE_URLS']['LANGUAGE_TRANSLATOR'])
+language_translator.set_service_url(env['SERVICE_URLS']['LANGUAGE_TRANSLATOR'])
 
 result = language_translator.identify(transcript).get_result()
 # print(json.dumps(result, indent=2))
@@ -54,7 +53,7 @@ print(translation)
 text_to_speech = TextToSpeechV1(
     authenticator=IAMAuthenticator(secrets['API_KEYS']['TEXT_TO_SPEECH'])
 )
-text_to_speech.set_service_url(settings['SERVICE_URLS']['TEXT_TO_SPEECH'])
+text_to_speech.set_service_url(env['SERVICE_URLS']['TEXT_TO_SPEECH'])
 
 with open('examples/audio-file-translated.flac', 'wb') as audio_file:
     audio_file.write(
