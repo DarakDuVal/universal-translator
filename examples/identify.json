@@ -1,0 +1,308 @@
+{
+  "languages": [
+    {
+      "language": "en",
+      "confidence": 0.9999999997162252
+    },
+    {
+      "language": "af",
+      "confidence": 8.685821123883591e-11
+    },
+    {
+      "language": "nl",
+      "confidence": 5.867531755024345e-11
+    },
+    {
+      "language": "pt",
+      "confidence": 5.614564144689771e-11
+    },
+    {
+      "language": "tl",
+      "confidence": 3.263725844580598e-11
+    },
+    {
+      "language": "es",
+      "confidence": 3.0348299175464496e-11
+    },
+    {
+      "language": "it",
+      "confidence": 1.128673579354715e-11
+    },
+    {
+      "language": "ro",
+      "confidence": 4.701376531147267e-12
+    },
+    {
+      "language": "et",
+      "confidence": 1.235557283452216e-12
+    },
+    {
+      "language": "ht",
+      "confidence": 4.4602602513508383e-13
+    },
+    {
+      "language": "ca",
+      "confidence": 3.41971524221285e-13
+    },
+    {
+      "language": "vi",
+      "confidence": 2.6448771143721186e-13
+    },
+    {
+      "language": "fr",
+      "confidence": 1.4310647014130804e-13
+    },
+    {
+      "language": "hu",
+      "confidence": 1.0607609505452573e-13
+    },
+    {
+      "language": "sk",
+      "confidence": 8.997539588704824e-14
+    },
+    {
+      "language": "nn",
+      "confidence": 8.611456006168185e-14
+    },
+    {
+      "language": "eo",
+      "confidence": 7.83517139633015e-14
+    },
+    {
+      "language": "de",
+      "confidence": 7.823917227282382e-14
+    },
+    {
+      "language": "ga",
+      "confidence": 7.766400147306358e-14
+    },
+    {
+      "language": "nb",
+      "confidence": 4.498000345347629e-14
+    },
+    {
+      "language": "cy",
+      "confidence": 2.843720126794194e-14
+    },
+    {
+      "language": "mt",
+      "confidence": 1.8994451222330882e-14
+    },
+    {
+      "language": "ms",
+      "confidence": 1.8170279261364698e-14
+    },
+    {
+      "language": "da",
+      "confidence": 1.5461188634286774e-14
+    },
+    {
+      "language": "pl",
+      "confidence": 1.0476946582615829e-14
+    },
+    {
+      "language": "cs",
+      "confidence": 8.47780363654772e-15
+    },
+    {
+      "language": "sv",
+      "confidence": 6.223444679105757e-15
+    },
+    {
+      "language": "fi",
+      "confidence": 5.47711797715582e-15
+    },
+    {
+      "language": "sq",
+      "confidence": 4.375759395793839e-15
+    },
+    {
+      "language": "tr",
+      "confidence": 2.9764273582969745e-15
+    },
+    {
+      "language": "eu",
+      "confidence": 2.9510051605821595e-15
+    },
+    {
+      "language": "sl",
+      "confidence": 2.1149780243269323e-15
+    },
+    {
+      "language": "ku",
+      "confidence": 1.4911747573624998e-15
+    },
+    {
+      "language": "hr",
+      "confidence": 1.1189350227013492e-15
+    },
+    {
+      "language": "ja",
+      "confidence": 1.0347454437433128e-15
+    },
+    {
+      "language": "az",
+      "confidence": 4.694523837059703e-16
+    },
+    {
+      "language": "lt",
+      "confidence": 4.521398497968345e-16
+    },
+    {
+      "language": "so",
+      "confidence": 8.558157583082483e-17
+    },
+    {
+      "language": "is",
+      "confidence": 8.075103178634644e-17
+    },
+    {
+      "language": "zh",
+      "confidence": 4.079775348811765e-17
+    },
+    {
+      "language": "lv",
+      "confidence": 4.061896352340159e-17
+    },
+    {
+      "language": "ko",
+      "confidence": 3.99155801180729e-17
+    },
+    {
+      "language": "zh-TW",
+      "confidence": 3.409862359393289e-17
+    },
+    {
+      "language": "th",
+      "confidence": 1.0149780389548388e-17
+    },
+    {
+      "language": "el",
+      "confidence": 3.1777845860695496e-18
+    },
+    {
+      "language": "hi",
+      "confidence": 2.1734398779089126e-18
+    },
+    {
+      "language": "ur",
+      "confidence": 5.815792870461584e-19
+    },
+    {
+      "language": "my",
+      "confidence": 2.0356909724314262e-19
+    },
+    {
+      "language": "ru",
+      "confidence": 2.023946283312669e-19
+    },
+    {
+      "language": "mn",
+      "confidence": 1.5555310049027296e-19
+    },
+    {
+      "language": "ar",
+      "confidence": 1.2290438410936453e-19
+    },
+    {
+      "language": "sr",
+      "confidence": 9.070447492827933e-20
+    },
+    {
+      "language": "lo",
+      "confidence": 3.661933768973787e-20
+    },
+    {
+      "language": "km",
+      "confidence": 2.8911324215467865e-20
+    },
+    {
+      "language": "he",
+      "confidence": 2.8493862757134515e-20
+    },
+    {
+      "language": "mr",
+      "confidence": 2.1502112923380193e-20
+    },
+    {
+      "language": "bn",
+      "confidence": 1.2322203479925473e-20
+    },
+    {
+      "language": "ka",
+      "confidence": 1.0705105698407576e-20
+    },
+    {
+      "language": "ne",
+      "confidence": 9.547733038572003e-21
+    },
+    {
+      "language": "ta",
+      "confidence": 8.527204028947925e-21
+    },
+    {
+      "language": "ky",
+      "confidence": 7.097693198709458e-21
+    },
+    {
+      "language": "uk",
+      "confidence": 6.81023405505953e-21
+    },
+    {
+      "language": "bg",
+      "confidence": 6.3365250929354944e-21
+    },
+    {
+      "language": "ps",
+      "confidence": 4.820190015182525e-21
+    },
+    {
+      "language": "kk",
+      "confidence": 4.797522352722016e-21
+    },
+    {
+      "language": "ml",
+      "confidence": 4.358895278052373e-21
+    },
+    {
+      "language": "te",
+      "confidence": 3.451806936326811e-21
+    },
+    {
+      "language": "pa",
+      "confidence": 3.3337854525168674e-21
+    },
+    {
+      "language": "fa",
+      "confidence": 2.8274843469635054e-21
+    },
+    {
+      "language": "hy",
+      "confidence": 2.6454229401858836e-21
+    },
+    {
+      "language": "pa-PK",
+      "confidence": 2.573159385717004e-21
+    },
+    {
+      "language": "be",
+      "confidence": 2.4407313897623686e-21
+    },
+    {
+      "language": "cv",
+      "confidence": 1.2255312517570017e-21
+    },
+    {
+      "language": "gu",
+      "confidence": 8.613459885664794e-22
+    },
+    {
+      "language": "ba",
+      "confidence": 7.491201984519549e-22
+    },
+    {
+      "language": "si",
+      "confidence": 4.239825482729536e-22
+    }
+  ]
+}

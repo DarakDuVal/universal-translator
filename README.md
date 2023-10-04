@@ -3,10 +3,14 @@ Provide the ultimate Star Trek feel with an AI-powered simultaneous translator, 
 Built on IBM Watson.
 
 
-
 # References
 - IBM Watson cloud services
   - Speech to Text
-    - API: https://cloud.ibm.com/apidocs/speech-to-text
+    - API: https://cloud.ibm.com/apidocs/speech-to-text?code=python
     - Doc: https://cloud.ibm.com/docs/speech-to-text
-
+  - Language translator
+    - API: https://cloud.ibm.com/apidocs/language-translator?code=python
+    - Doc: https://cloud.ibm.com/docs/language-translator
+  - Text to Speech
+    - API: https://cloud.ibm.com/apidocs/text-to-speech?code=python 
+    - Doc: https://cloud.ibm.com/docs/text-to-speech
