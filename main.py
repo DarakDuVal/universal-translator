@@ -6,29 +6,23 @@ from ibm_watson import SpeechToTextV1, LanguageTranslatorV3, TextToSpeechV1
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
 
-def read_secrets() -> dict:
-    filename = Path('./secrets.json')
+def get_env(filename) -> dict:
     with open(filename, mode='r') as f:
         return json.loads(f.read())
 
 
-secrets = read_secrets()
+secrets = get_env(Path('./secrets.json'))
+settings = get_env(Path('./settings.json'))
 
-_S2T_SERVICE_URL = 'https://api.eu-de.speech-to-text.watson.cloud.ibm.com/instances/cad9fc09-4d2d-49c1-ae63-cdd85c2fa4f0'
-_L2L_SERVICE_URL = 'https://api.eu-de.language-translator.watson.cloud.ibm.com/instances/8c68b0b5-5ce9-47cb-9e9c-6e1c2a1da190'
-_T2S_SERVICE_URL = 'https://api.eu-de.text-to-speech.watson.cloud.ibm.com/instances/77d6e5a8-81c5-4c50-b744-549e1e5cefae'
 _AUDIO_FILE = Path('./examples/audio-file2.flac')
 
-s2t_auth = IAMAuthenticator(secrets['API_KEYS']['SPEECH_TO_TEXT'])
-l2l_auth = IAMAuthenticator(secrets['API_KEYS']['LANGUAGE_TRANSLATOR'])
-t2s_auth = IAMAuthenticator(secrets['API_KEYS']['TEXT_TO_SPEECH'])
 
 speech_to_text = SpeechToTextV1(
-    authenticator=s2t_auth,
+    authenticator=IAMAuthenticator(secrets['API_KEYS']['SPEECH_TO_TEXT']),
 )
-speech_to_text.set_service_url(_S2T_SERVICE_URL)
+speech_to_text.set_service_url(settings['SERVICE_URLS']['SPEECH_TO_TEXT'])
 
-print(_AUDIO_FILE.resolve())
+#print(_AUDIO_FILE.resolve())
 with open(_AUDIO_FILE.resolve(), 'rb') as audio_file:
     result = speech_to_text.recognize(
         audio=audio_file,
@@ -39,10 +33,10 @@ transcript = result['results'][0]['alternatives'][0]['transcript']
 print(transcript)
 
 language_translator = LanguageTranslatorV3(
-    authenticator=l2l_auth,
+    authenticator=IAMAuthenticator(secrets['API_KEYS']['LANGUAGE_TRANSLATOR']),
     version='2018-05-01'
 )
-language_translator.set_service_url(_L2L_SERVICE_URL)
+language_translator.set_service_url(settings['SERVICE_URLS']['LANGUAGE_TRANSLATOR'])
 
 result = language_translator.identify(transcript).get_result()
 # print(json.dumps(result, indent=2))
@@ -58,9 +52,9 @@ translation = result['translations'][0]['translation']
 print(translation)
 
 text_to_speech = TextToSpeechV1(
-    authenticator=t2s_auth
+    authenticator=IAMAuthenticator(secrets['API_KEYS']['TEXT_TO_SPEECH'])
 )
-text_to_speech.set_service_url(_T2S_SERVICE_URL)
+text_to_speech.set_service_url(settings['SERVICE_URLS']['TEXT_TO_SPEECH'])
 
 with open('examples/audio-file-translated.flac', 'wb') as audio_file:
     audio_file.write(
