@@ -3,6 +3,10 @@ Provide the ultimate Star Trek feel with an AI-powered simultaneous translator, 
 Built on IBM Watson.
 
 
+# Environment
+
+
+
 # References
 - IBM Watson cloud services
   - Speech to Text
