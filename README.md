@@ -14,3 +14,9 @@ Built on IBM Watson.
   - Text to Speech
     - API: https://cloud.ibm.com/apidocs/text-to-speech?code=python 
     - Doc: https://cloud.ibm.com/docs/text-to-speech
+
+
+# Known issues
+
+- pyaudio does not install on Ubuntu
+run `sudo apt install portaudio19-dev` to resolve missing `portaudio.h` file
