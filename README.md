@@ -4,7 +4,9 @@ Built on IBM Watson.
 
 
 # Environment
-
+## Beeware
+sudo apt update
+sudo apt install build-essential git pkg-config python3-dev python3-venv libgirepository1.0-dev libcairo2-dev gir1.2-webkit2-4.0 libcanberra-gtk3-module
 
 
 # References
