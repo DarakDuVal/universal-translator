@@ -20,7 +20,7 @@ sudo apt install build-essential git pkg-config python3-dev python3-venv libgire
   - Text to Speech
     - API: https://cloud.ibm.com/apidocs/text-to-speech?code=python 
     - Doc: https://cloud.ibm.com/docs/text-to-speech
-
+- https://github.com/ibm-developer-skills-network/translator-with-voice-and-watsonx
 
 # Known issues
 
